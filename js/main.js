@@ -1,6 +1,6 @@
-let contentCard = document.querySelector('.content_card_servicios');
+let contentCard = document.querySelector('.content_cards_slider_wrap');
 
-let contentCardFake = document.querySelectorAll('.card_service');  
+let contentCardFake = document.querySelectorAll('.content_cards_cortes');  
 
 
 
@@ -10,9 +10,9 @@ const verifyVisibility = (entries) =>{
     
     if(entries[0].isIntersecting !== false){
          
-        entries[0].target.classList.add('active')
+        entries[0].target.setAttribute('id','cutes_active')
     }else{
-        entries[0].target.classList.remove('active')
+        entries[0].target.removeAttribute('id')
 
     }
 

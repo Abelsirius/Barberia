@@ -492,9 +492,11 @@ margin: 7rem 0;
     font-weight: lighter;
     color: rgb(255, 255, 255);
     padding: 0 5px;
+    width: 90%;
     line-height: 17px;
     transform: translateY(10px);
-    transition: .7s ease;
+    transition-delay: 1s;
+    transition: 1s ease-in-out;
 
 }
 
@@ -770,7 +772,7 @@ input::placeholder, textarea::placeholder{
 .content_wrapper_ubicacion{
     display: flex;
     justify-content: center;
-    height: 500px;
+    height: fit-content;
     width: 80%;
     border-radius: 15px;
     margin: 50px;
@@ -834,6 +836,13 @@ input::placeholder, textarea::placeholder{
     font-family: var(--h2-size);
     font-weight: var(--font-semi-bold);
     font-size: 1.3rem;
+}
+
+
+#cutes_active .content_wrapper_cards_cute .description_cute,#cutes_active .content_wrapper_cards_cute .prize_cute{ 
+    position: relative;
+    transform: translateY(0);
+    transition: .7s ease;
 }
 @media only screen and (max-width: 770px) {
  
@@ -958,7 +967,7 @@ input::placeholder, textarea::placeholder{
         width: 70%;
     }
     .inputs-form input, .textTarea{
-        width: 50%;
+        width: 90%;
     }
 
     form{
@@ -969,9 +978,25 @@ input::placeholder, textarea::placeholder{
         width: 100%;
     }
     .content_features_cute{
-        left: 25px;
+        left: 10px;
     }
     .social-media-icons{
         width: 100%;
+    }
+    .content_cards_cortes{
+        width: 100%;
+    }
+    .titulo,.item-social-media .icon-social{
+        font-size: 25px;
+    }
+    .sub-title p,.sub-title span{
+        font-size: 14px;
+    
+    }
+    .titulo_contact{
+        font-size: 20px;
+    }
+    .inputs-form input, .textTarea{
+        font-size: 12px;
     }
 }
