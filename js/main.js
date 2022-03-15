@@ -1,3 +1,5 @@
+
+
 let contentCard = document.querySelector('.content_cards_slider_wrap');
 
 let contentCardFake = document.querySelectorAll('.content_cards_cortes');  
@@ -24,28 +26,6 @@ const observer =  new IntersectionObserver(verifyVisibility)
 
 observer.observe(contentCard)
 
-
-
-
-  
-var swiper = new Swiper('.swiper', {
-
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  spaceBetween: 10,
-  loop : true,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 10,
-    depth: 100,
-    modifier: 1,
-  
-  },
-  pagination: {
-    el: '.swiper-pagination',
-  },
-});
 
 
 /* -------------------- ActivarHeader -------------- */ 
@@ -122,3 +102,52 @@ const closeNav = (e) =>{
 
 arrLinks.forEach(link => link.addEventListener('click',(e)=>closeNav(e)))
 
+
+
+
+const fitCarrusel = () =>{
+
+  let body = document.querySelector('body').offsetWidth;
+  
+  if(body < 400){
+    var swiper = new Swiper('.swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      spaceBetween: 15,
+      loop: 'true',
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 10,
+        stretch: 0,
+        depth: 100,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  }
+  else{
+    var swiper = new Swiper('.swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: 'true',
+      coverflowEffect: {
+        rotate: 10,
+        stretch: 0,
+        depth: 100,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  }
+   
+  
+}
+
+window.addEventListener('load',fitCarrusel)

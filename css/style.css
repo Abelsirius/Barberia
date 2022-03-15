@@ -984,7 +984,7 @@ input::placeholder, textarea::placeholder{
         width: 100%;
     }
     .content_cards_cortes{
-        width: 100%;
+        width: 230px;
     }
     .titulo,.item-social-media .icon-social{
         font-size: 25px;
